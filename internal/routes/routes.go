@@ -10,7 +10,10 @@ func SetupRoutes() *gin.Engine {
 
 	api := router.Group("/api")
 	{
-		api.POST("/users", handlers.CreateUser)
+		api.POST("/user", handlers.CreateUser)
+		api.POST("/wallet", handlers.CreateWallet)
+		api.GET("/wallet/:user_id/balance", handlers.GetWalletBalance)
+		api.POST("/transfer", handlers.TransferMoney)
 	}
 
 	return router
