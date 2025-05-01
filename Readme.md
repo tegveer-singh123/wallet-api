@@ -39,7 +39,15 @@ Clone this repository to your local machine:
 git clone https://github.com/tegveer-singh123/wallet-api.git
 cd wallet-api
 
-### 2.  Set up the  env variables (Here i attached .env as it is assignment)
+### 2.  Set up the  env variables 
+
+APP_PORT=8080
+DB_HOST=localhost
+DB_PORT=5432
+DB_USER=your-db-username
+DB_PASSWORD=your-db-password
+DB_NAME=wallet_api
+
 
 ### 3. Install Dependencies 
 
