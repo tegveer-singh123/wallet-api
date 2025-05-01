@@ -58,6 +58,8 @@ func CreateWallet(c *gin.Context) {
 	})
 }
 
+
+
 //this is the get wallet balance handler function which returns the balance of a wallet
 func GetWalletBalance(c *gin.Context) {
 	// Get the user_id from the URL parameter

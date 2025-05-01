@@ -16,6 +16,7 @@ type TransferInput struct {
 	Amount     float64 `json:"amount" binding:"required,gt=0"`
 }
 
+
 func TransferMoney(c *gin.Context) {
 	var input TransferInput
 
