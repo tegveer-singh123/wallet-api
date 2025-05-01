@@ -14,6 +14,7 @@ func SetupRoutes() *gin.Engine {
 		api.POST("/wallet", handlers.CreateWallet)
 		api.GET("/wallet/:user_id/balance", handlers.GetWalletBalance)
 		api.POST("/transfer", handlers.TransferMoney)
+		api.GET("/users/:user_id/transactions", handlers.GetUserTransactions)
 	}
 
 	return router
