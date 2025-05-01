@@ -5,6 +5,7 @@ import (
 	"log"
 	"os"
 
+	"github.com/tegveer-singh123/wallet-api/internal/models"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -25,5 +26,14 @@ func ConnectDatabase() {
 	if err != nil {
 		log.Fatal("Failed to connect to database:", err)
 	}
+
+	err = DB.AutoMigrate(
+		&models.User{},
+		&models.Wallet{},
+	)
+	if err != nil {
+		log.Fatal("Failed to migrate database:", err)
+	}
+
 	log.Println("Database connected successfully")
 }
